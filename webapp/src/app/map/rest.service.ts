@@ -78,7 +78,7 @@ export class RestService {
   constructor(private client: HttpClient) {}
 
   getDetails(id: number): Observable<Details[]> {
-    return this.client.get<Details[]>('https://02bb1a4d2689.ngrok.io/api/types?tilesId=' + id).pipe();
+    return this.client.get<Details[]>('https://hackathon-webapp-app-94.1mnyd5hmu6w.us-south.codeengine.appdomain.cloud/api/types?tilesId=' + id).pipe();
     return of([
       new Details(
         "ID",
@@ -134,7 +134,7 @@ export class RestService {
     return of(tiles);*/
 
     
-     return this.client.get<Tile[]>('https://02bb1a4d2689.ngrok.io/api/tiles').pipe(tap((tiles: Tile[])=> {
+     return this.client.get<Tile[]>('https://hackathon-webapp-app-94.1mnyd5hmu6w.us-south.codeengine.appdomain.cloud//api/tiles').pipe(tap((tiles: Tile[])=> {
         this.initialTiles = tiles;
         this.tiles.next(JSON.parse(JSON.stringify(tiles)));
         })

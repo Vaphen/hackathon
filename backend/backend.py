@@ -32,7 +32,7 @@ class Node:
 
 def connect_db() -> psycopg2.extensions.connection:
     return psycopg2.connect(
-        "host=localhost dbname=hackathon user=postgres password=password")
+        "host=echo.db.elephantsql.com dbname=qihzwdtc user=qihzwdtc password=e7GD_QPvwJbnzYDPgxJcOorvVtxecSq8")
 
 
 def get_all_tiles() -> List[Tile]:
