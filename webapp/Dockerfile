@@ -11,4 +11,6 @@ RUN npm run build -- --outputPath=./dist/ --base-href=/webapp/
 
 FROM bitnami/nginx
 
+COPY ./nginx-server-block.config /opt/bitnami/nginx/conf/server_blocks/nginx-server-block.conf
+
 COPY --from=build /app/dist/ /app
